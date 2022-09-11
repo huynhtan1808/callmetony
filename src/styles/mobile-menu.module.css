@@ -1,0 +1,79 @@
+.burger {
+    transition: opacity 300ms ease;
+    border: 0;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+  
+  .burger svg {
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transition: opacity 300ms ease, transform 300ms ease;
+  }
+  
+  .burger svg[data-hide='true'] {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  .menu {
+    @apply w-64 h-screen top-0;
+    z-index: 1000;
+    opacity: 0;
+    left: 0;
+    transition: opacity 300ms ease, transform 300ms ease;
+  }
+  
+  .menu li {
+    transform: translateX(-16px);
+    opacity: 0;
+    transition: opacity 300ms ease, transform 300ms ease, width 300ms ease,
+      border-color 300ms ease;
+    width: 0px;
+    white-space: nowrap;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .menu li a{
+    padding: 10px 20px;
+    margin-bottom: 40px;
+  }
+
+  .mobileMenu {
+    @apply bg-white w-full;
+    opacity: 0;
+    left: 0;
+    transition: opacity 300ms ease, transform 300ms ease;
+  }
+  .mobileMenu li{
+    transform: translateX(-16px);
+    opacity: 0;
+    transition: opacity 300ms ease, transform 300ms ease, width 300ms ease,
+      border-color 300ms ease;
+    font-size: 18px;
+  }
+  
+  .menuRendered {
+    opacity: 1;
+  }
+  
+  .menuRendered li {
+    @apply border-b border-gray-200 py-5 w-full;
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  
+  @keyframes grow {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 24px;
+    }
+  }
