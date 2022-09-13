@@ -2,61 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Circular;
-  src: url(/fonts/circular/CircularStd-Book.woff2) format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: Circular;
-  src: url(/fonts/circular/CircularStd-Medium.woff2) format("woff2");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: Circular;
-  src: url(/fonts/circular/CircularStd-Bold.woff2) format("woff2");
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: Circular;
-  src: url(/fonts/circular/CircularStd-Black.woff2) format("woff2");
-  font-weight: 700;
-  font-display: swap;
-}
-/*Body Font*/
-@font-face {
-  font-family: Calibre;
-  src: url(/fonts/calibre/CalibreLight.woff2) format("woff2");
-  font-weight: 300;
-  font-display: swap;
-}
-@font-face {
-  font-family: Calibre;
-  src: url(/fonts/calibre/CalibreRegular.woff2) format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: Calibre;
-  src: url(/fonts/calibre/CalibreBlack.woff2) format("woff2");
-  font-weight: 800;
-  font-display: swap;
-}
-@font-face {
-  font-family: Calibre;
-  src: url(/fonts/calibre/CalibreMedium.woff2) format("woff2");
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: Calibre;
-  src: url(/fonts/calibre/CalibreSemibold.woff2) format("woff2");
-  font-weight: 700;
-  font-display: swap;
-}
 
 html {
   scroll-behavior: smooth;
@@ -67,35 +12,31 @@ a {
 }
 
 b, strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 body {
-  font-family: 'Calibre', serif;
-  font-size: 18px;
-  font-weight: 300;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.5rem;
   overflow-x: hidden;
   height: 100%;
 }
 .font-base{
-  font-family: 'Calibre', serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 .font-title{
-  font-family: 'Circular', serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500;
-}
-.text-base{
-  font-size: 20px;
-  letter-spacing: normal;
 }
 
 .title {
-  font-family: 'Circular';
-  font-weight: 600;
-  font-size: 40px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
   line-height: 1.2;
-  letter-spacing: normal;
+  letter-spacing: -1px;
 }
 @media (max-width: 680px) {
   .title
@@ -110,30 +51,26 @@ body {
 }
 
 .single-post h2,h3,h4,h5,h6{
-  font-family: 'Circular', serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: normal;
   scroll-margin-top: 80px; 
 }
-.prose-lg p {
-  font-size: 20px;
+
+.prose-lg  {
+  font-size: 17px;
   line-height: 2;
+  color: #232434;
 }
+
 .prose-lg code {
   @apply text-gray-800 px-1 py-0.5 border border-gray-100 rounded-md bg-gray-100;
 }
 
-.prose-lg blockquote{
-  @apply border-l-3 border-secondary bg-blue-50 px-4 py-1;
-}
-
-.prose-lg figcaption p{
-  @apply text-gray-500 text-sm -mt-5 leading-3
-}
-
-.prose-lg ul>li{
-  @apply list-square list-inside;
+.prose pre code {
+  @apply text-gray-800 p-0;
+  border: initial;
 }
 
 .prose-lg ol {
@@ -153,11 +90,11 @@ body {
   left: 0;
   position: absolute;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 27px;
   font-weight: bold;
   text-align: center;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50px;
   display: block;
 }
@@ -171,16 +108,16 @@ body {
   @apply rounded-lg;
 }
 .img-height img {
-  @apply w-full  h-64 md:h-44 object-cover;
+  @apply w-full  h-64 md:h-36 object-cover;
 }
 .imgThumbnail img{
   @apply w-full h-44 lg:h-32 object-cover;
 }
 .wp-block-image{
-  @apply bg-blue-50 shadow-lg object-cover;
+  @apply bg-white shadow-lg;
 }
 .wp-block-image figcaption {
-  @apply text-center pb-3 leading-3 font-semibold;
+  @apply text-center pb-3 leading-3 font-normal text-sm;
 }
 
 .relatedPostsImage img{
@@ -201,9 +138,26 @@ body {
   max-width: 1448px;
 }
 }
-
 .toc {
-  align-self: start;
+  margin: 30px 0;
+  max-width: 685px;
+}
+
+.toc ul>li{
+  line-height: 1.25;
+  display: block;
+  border-radius: 0px;
+  margin-left: -2px;
+  border: 2px solid #e3dddc;
+  margin-bottom: -2px;
+  padding: 12px 8px;
+}
+.toc ul>li:hover {
+  background-color: #ede7e6;
+  border-left: 2px solid #2c35bf;
+}
+.toc ul>li:hover a{
+  color: #2c35bf;
 }
 
 .title img{
@@ -220,3 +174,7 @@ body {
 .dropShadow{
     @apply shadow-md
   }
+
+.contentSection {
+  @apply -mt-14;
+}

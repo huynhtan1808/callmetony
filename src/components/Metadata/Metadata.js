@@ -14,7 +14,7 @@ const Metadata = ({ author, date, categories, options = DEFAULT_METADATA_OPTIONS
   const { compactCategories } = options;
 
   return (
-    <ul className="flex text-normal items-center p-0">
+    <ul className="flex text-sm items-center p-0">
       
       {author && (
         <li className="flex list-none h-12 pl-0">

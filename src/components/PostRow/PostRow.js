@@ -36,7 +36,7 @@ const PostList = ({ post, options = {} }) => {
           </div>
           <div className="pt-4">
           <h2
-            className="text-2xl font-semibold font-title"
+            className="text-xl font-semibold font-title"
             dangerouslySetInnerHTML={{
               __html: title,
             }}

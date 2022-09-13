@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     maxWidth: {
       '3xl': '768px',
-      '6xl': '1024px',
-      '7xl': '1400px',
+      '6xl': '936px',
+      '7xl': '1170px',
     },
     listStyleType: {
       none: 'none',
@@ -14,6 +14,9 @@ module.exports = {
      decimal: 'decimal',
      square: 'square',
      roman: 'upper-roman',
+    },
+    dropShadow: {
+      'logo': '-2px 3px 0px #fdba74',
     },
     boxShadow: {
       'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',

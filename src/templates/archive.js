@@ -53,7 +53,7 @@ export default function TemplateArchive({
           </div>
       </Header>
 
-      <Section className="max-w-6xl mx-auto -mt-12">
+      <Section className="max-w-6xl mx-auto contentSection">
         <Container>
           {Array.isArray(posts) && (
             <>
@@ -61,7 +61,7 @@ export default function TemplateArchive({
               <ul className="blogList">
                 {posts.map((post) => {
                   return (
-                    <li key={post.slug} className="bg-white dropShadow pb-2 md:pt-0">
+                    <li key={post.slug} className="bg-white dropShadow pb-2 md:pt-0 rounded">
                       <PostArchive post={post} options={postOptions} />
                     </li>
                   );

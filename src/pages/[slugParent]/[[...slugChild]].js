@@ -67,7 +67,7 @@ export default function Page({ page, breadcrumbs }) {
         <Section>
           <Container>
             <div
-              className="prose prose-lg max-w-3xl mx-auto"
+              className="mt-6 prose prose-lg max-w-3xl mx-auto"
               dangerouslySetInnerHTML={{
                 __html: content,
               }}

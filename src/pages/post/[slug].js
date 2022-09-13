@@ -50,7 +50,7 @@ export default function Post({ post, socialImage, related }) {
   .use(() => {
     return (tree) => {
       visit(tree, 'element', (node) => {
-        if (node.tagName === 'h3' ) {
+        if (node.tagName === 'h3') {
           const id = parameterize(node.children[0].value);
           node.properties.id = id;
           
@@ -110,39 +110,33 @@ export default function Post({ post, socialImage, related }) {
 
   return (
     <Layout>
-      <Container>
+      
       <Helmet {...helmetSettings} />
 
       <ArticleJsonLd post={post} siteTitle={siteMetadata.title} />
       <Content>
-      <div className="lg:flex">
-        <div className="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible">
-          <div className="flex">
-            <div className="pb-8 w-full">
-              <div className="flex flex-col xl:flex-row xl:flex-relative">
-                <aside id="sidebar2" class="sidebar2 block w-full hidden xxl:block font-4 mt-8">
-                  
-                </aside>
-          <Section className="w-full min-w-0 md:max-w-2xl lg:max-w-none lg:pr-6 xxl:px-6 mx-auto lg:ml-0 lg:mr-auto xl:mx-0 link-decor single-post porse prose-lg"> 
-          <PostHeader>
-            <span className="font-semibold text-secondary uppercase">
+        <Section>
+          <Container>
+            <div className="md:max-w-3xl link-decor prose prose-lg mx-auto">
+            <PostHeader>
+              <span className="text-sm font-semibold uppercase">
               <Link href={relatedPostsTitle.link}>
-                <a className="border-none">{relatedPostsTitle.name}</a>
+                  <a className="border-none text-orange-500">{relatedPostsTitle.name}</a>
               </Link>
-            </span>
-            <h1
+              </span>
+              <h1
                 className="my-4 title leading-normal"
                 dangerouslySetInnerHTML={{
                   __html: title,
                 }}
               />
-              {excerpt && (
-                <div
-                className="text-base text-gray-500 leading-normal"
-                dangerouslySetInnerHTML={{
-                  __html: sanitizeExcerpt(excerpt),
-                }}
-              />
+            {excerpt && (
+            <div
+              className="text-base text-gray-500 leading-normal"
+              dangerouslySetInnerHTML={{
+                __html: sanitizeExcerpt(excerpt),
+              }}
+            />
             )}
             <Metadata
                 className="text-sm"
@@ -152,67 +146,48 @@ export default function Post({ post, socialImage, related }) {
                 options={metadataOptions}
                 isSticky={isSticky}
               />
-            </PostHeader>
-            <div className="featuredImage">
-            {featuredImage && (
-              <FeaturedImage
-                {...featuredImage}
-                src={featuredImage.sourceUrl}
-                dangerouslySetInnerHTML={featuredImage.caption}
-              />
-            )}
-            </div>
-            
-            <div className="toc bg-gray-100 p-3 mb-5">
-              <p className="uppercase text-xs font-semibold m-0 tracking-tight text-gray-800">
-              WHAT'S IN THIS GUIDE</p>
-                <ul className="list-decimal text-gray-500 px-3">
+              </PostHeader>
+              
+              <div className="featuredImage"> 
+                {featuredImage && (
+                <FeaturedImage
+                  {...featuredImage}
+                  src={featuredImage.sourceUrl}
+                  dangerouslySetInnerHTML={featuredImage.alt}
+                />
+                )}
+              </div>
+              <div className="toc">
+                <p className="font-medium mb-2 uppercase tracking-tight text-gray-800">
+                Mục lục
+                </p>
+                <ul className="list-none font-normal pl-0">
                   {toc.map(({ id, title }) => {
                   return (
-                    <li  className="mb-3 cursor-pointer hover:text-secondary" key={id}>
-                    <a className="border-none" href={`#${id}`}>
-                    { title }
+                    <li  className="cursor-pointer m-0" key={id}>
+                    <a className="border-none font-normal" href={`#${id}`}>
+                      { title }
                     </a>
                     </li>
                     )
-                  })}
+                    })}
                 </ul>
+              </div>
+              
+              <p className="mx-auto font-4 text-gray-500">Cập nhật vào lúc {formatDate(modified)}.</p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: content,
+                }}
+              />
             </div>
-            <InArticleAds />
-            <p className="mx-auto font-4 text-gray-500">Last updated on {formatDate(modified)}.</p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: content,
-              }}
-            />
-            <InArticleAds />
-            
+            </Container>
           </Section>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div id="sidebar" className="sidebar grow hidden absolute top-16 w-full mt-8 -mb-16 lg:-mb-0 lg:static lg:pt-0 lg:block">
-        <div className="lg:block lg:top-16 flex flex-col pt-12 -mt-12">
-          <FixedAds />
-        </div>
-        <div className="lg:block lg:top-16 flex flex-col pt-12 -mt-12">
-          <FixedAds />
-        </div>
-        <div className="lg:block lg:top-16 flex flex-col pt-12 -mt-12">
-          <FixedAds />
-        </div>
-        <div className="lg:block lg:top-16 flex flex-col pt-12 -mt-12">
-          <FixedAds />
-        </div>
-        <div className="lg:block lg:relative lg:sticky lg:top-16 flex flex-col pt-12 -mt-12">
-          <FloatSideBarAd />
-        </div>
-      </div>
-      </div>
-      </Content>
-      
-      <Section className="md:max-w-3xl mx-auto md:px-2">
+        </Content>
+
+      <Section>
+      <Container>
+        <div className="md:max-w-3xl mx-auto">
         <Subscribe />
         {Array.isArray(relatedPostsList) && relatedPostsList.length > 0 && (            
           <div className="border-t border-gray-300 py-10">
@@ -250,9 +225,9 @@ export default function Post({ post, socialImage, related }) {
               </ul>
             </div>
           )}
-          <GridAd />
-      </Section>
+        </div>
       </Container>
+      </Section>
     </Layout>
   );
 }

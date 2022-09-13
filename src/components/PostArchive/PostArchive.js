@@ -21,7 +21,7 @@ const PostArchive = ({ post, options = {} }) => {
 
 
   return (
-    <div className="">
+    <div>
       <Link href={postPathBySlug(slug)}>
         <a>
           <div >
@@ -36,20 +36,13 @@ const PostArchive = ({ post, options = {} }) => {
           </div>
           <div className="px-5 py-4">
           <h2
-            className="text-2xl font-semibold font-title postTitle"
+            className="text-xl font-semibold font-title postTitle mb-3"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
-          {excerpt && (
-            <div
-              className="py-2 text-gray-600"
-              dangerouslySetInnerHTML={{
-                __html: sanitizeExcerpt(excerpt),
-              }}
-            />
-            )}
             <Metadata
+              className="text-sm"
               date={date}
             />
           </div>  
