@@ -1,5 +1,6 @@
 import NextApp from 'next/app';
 import Head from 'next/head';
+import { ThemeProvider } from 'next-themes';
 
 import { SiteContext, useSiteContext } from 'hooks/use-site';
 import { SearchProvider } from 'hooks/use-search';
@@ -24,10 +25,11 @@ function App({ Component, pageProps = {}, metadata, recentPosts, categories, men
 
   return (
     <SiteContext.Provider value={site}>
+      <ThemeProvider attribute="class">
       <SearchProvider>
-        
         <Component {...pageProps} />
       </SearchProvider>
+      </ThemeProvider>
     </SiteContext.Provider>
   );
 }

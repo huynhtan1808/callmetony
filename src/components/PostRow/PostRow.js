@@ -25,7 +25,7 @@ const PostList = ({ post, options = {} }) => {
       <Link href={postPathBySlug(slug)}>
         <a>
           <div >
-          <div className="img-height">
+          <div className="featuredImage">
           {featuredImage && (
           <FeaturedImage
             {...featuredImage}
@@ -36,22 +36,15 @@ const PostList = ({ post, options = {} }) => {
           </div>
           <div className="pt-4">
           <h2
-            className="text-xl font-semibold font-title"
+            className="text-lg font-semibold"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
-          {excerpt && (
-            <div
-              className="py-2 text-gray-600"
-              dangerouslySetInnerHTML={{
-                __html: sanitizeExcerpt(excerpt),
-              }}
-            />
-            )}
-            <Metadata
-              date={date}
-            />
+          <Metadata
+            date={date}
+            categories={categories}
+          />
           </div>  
           </div>     
         </a>

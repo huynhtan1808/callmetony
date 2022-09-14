@@ -15,13 +15,12 @@ const Metadata = ({ author, date, categories, options = DEFAULT_METADATA_OPTIONS
 
   return (
     <ul className="flex text-sm items-center p-0">
-      
       {author && (
         <li className="flex list-none h-12 pl-0">
           <address className="flex items-center not-italic">
             {author.avatar && (
               <img
-                className="h-8 w-8 z-0 filter grayscale rounded-full mr-2 object-cover"
+                className="h-8 w-8 z-0 filter rounded-full mr-2 object-cover"
                 width={author.avatar.width}
                 height={author.avatar.height}
                 src={author.avatar.url}
@@ -29,21 +28,21 @@ const Metadata = ({ author, date, categories, options = DEFAULT_METADATA_OPTIONS
               />
             )}
             <Link href={authorPathByName(author.name)}>
-              <a className="font-normal ml-1 border-none" rel="author">{author.name}</a>
+              <a className="no-underline font-semibold ml-1 text-gray-700 dark:text-gray-300" rel="author">{author.name}</a>
             </Link>
-            <span className="mx-2 text-gray-500">|</span>
+            <span className="mx-2">-</span>
           </address>
         </li> 
       )}
       {date && (
-        <li className="block pl-0 text-gray-500">
+        <li className="block pl-0 text-gray-700 dark:text-gray-300">
           <time pubdate="pubdate" dateTime={date}>
             {formatDate(date)}
           </time>
         </li>
       )}
       {Array.isArray(categories) && categories[0] && (
-        <li className="ml-5 text-secondary uppercase">
+        <li className="ml-5 text-xs font-semibold text-orange-500 hover:text-black uppercase">
           {compactCategories && (
             <p title={categories.map(({ name }) => name).join(', ')}>
               <Link href={categoryPathBySlug(categories[0].slug)}>

@@ -13,7 +13,7 @@ export default function Author({ user, posts }) {
     metadata: {
       ...user,
       title,
-      description: description || user.og?.description || `Read ${posts.length} posts from ${name}`,
+      description: description || user.og?.description || `Top ${posts.length} bài viết nổi bật từ ${name}`,
     },
   });
 

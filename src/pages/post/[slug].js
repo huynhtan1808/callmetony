@@ -117,35 +117,36 @@ export default function Post({ post, socialImage, related }) {
       <Content>
         <Section>
           <Container>
-            <div className="md:max-w-3xl link-decor prose prose-lg mx-auto">
+            <div className="md:max-w-3xl link-decor prose dark:prose-dark mx-auto">
             <PostHeader>
               <span className="text-sm font-semibold uppercase">
               <Link href={relatedPostsTitle.link}>
-                  <a className="border-none text-orange-500">{relatedPostsTitle.name}</a>
+                  <a className="no-underline text-orange-500 dark:text-orange-500 border-none">{relatedPostsTitle.name}</a>
               </Link>
               </span>
               <h1
-                className="my-4 title leading-normal"
+                className="pt-4 dark:text-white"
                 dangerouslySetInnerHTML={{
                   __html: title,
                 }}
               />
             {excerpt && (
             <div
-              className="text-base text-gray-500 leading-normal"
+              className="text-gray-600 dark:text-gray-400"
               dangerouslySetInnerHTML={{
                 __html: sanitizeExcerpt(excerpt),
               }}
             />
             )}
+            
             <Metadata
-                className="text-sm"
                 date={date}
                 author={author}
                 category={categories}
                 options={metadataOptions}
                 isSticky={isSticky}
               />
+              <p className="text-gray-700 dark:text-gray-300 m-0 text-sm">Cập nhật vào lúc {formatDate(modified)}.</p>
               </PostHeader>
               
               <div className="featuredImage"> 
@@ -158,14 +159,14 @@ export default function Post({ post, socialImage, related }) {
                 )}
               </div>
               <div className="toc">
-                <p className="font-medium mb-2 uppercase tracking-tight text-gray-800">
+                <p className="font-medium mb-2 uppercase tracking-tight">
                 Mục lục
                 </p>
-                <ul className="list-none font-normal pl-0">
+                <ul className="list-none pl-0">
                   {toc.map(({ id, title }) => {
                   return (
-                    <li  className="cursor-pointer m-0" key={id}>
-                    <a className="border-none font-normal" href={`#${id}`}>
+                    <li  className="m-0" key={id}>
+                    <a className="no-underline" href={`#${id}`}>
                       { title }
                     </a>
                     </li>
@@ -174,7 +175,6 @@ export default function Post({ post, socialImage, related }) {
                 </ul>
               </div>
               
-              <p className="mx-auto font-4 text-gray-500">Cập nhật vào lúc {formatDate(modified)}.</p>
               <div
                 dangerouslySetInnerHTML={{
                   __html: content,
@@ -193,7 +193,7 @@ export default function Post({ post, socialImage, related }) {
           <div className="border-t border-gray-300 py-10">
             {relatedPostsTitle.name ? (
               <span className="text-2xl font-semibold">
-                More from{' '}
+                Cùng chuyên mục{' '}
                 <Link href={relatedPostsTitle.link}>
                   <a className="hover:underline">{relatedPostsTitle.name}</a>
                 </Link>
@@ -203,9 +203,9 @@ export default function Post({ post, socialImage, related }) {
               )}
               <ul className="blogList pl-0 pt-5">
                 {relatedPostsList.map((post) => (
-                  <li className="list-none bg-white cursor-pointer dropShadow" key={post.title}>
+                  <li className="list-none bg-white dark:bg-gray-800 cursor-pointer dropShadow rounded" key={post.title}>
                     <Link href={postPathBySlug(post.slug)}>
-                    <div className="relatedPostsImage">
+                    <div className="imgThumbnail">
                     {post.featuredImage && (
                       <FeaturedImage
                         {...post.featuredImage}

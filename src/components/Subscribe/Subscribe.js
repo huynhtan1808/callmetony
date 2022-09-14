@@ -41,8 +41,8 @@ export default function Subscribe() {
   };
 
   return (
-    <div id="subscribe" className="max-w-3xl p-6 my-6 bg-blue-100 rounded-lg">
-      <p className="font-5 text-lg my-2">
+    <div id="subscribe" className="border border-orange-200 rounded p-6 my-4 w-full dark:border-gray-800 bg-orange-50 dark:bg-orange-50">
+      <p className="text-lg md:text-xl font-bold text-gray-900">
         Sign up for the Business Hi-Lite newsletter for the latest news and analysis delivered straight to your inbox.
       </p>
       <form className="relative my-4 rounded-lg" onSubmit={subscribe}>
@@ -56,7 +56,7 @@ export default function Subscribe() {
           className="font-4 text-sm px-4 py-3 focus:ring-blue-500 focus:border-blue-500 block w-full rounded-lg bg-white text-gray-900"
         />
         <button
-          className="flex font-5 text-sm items-center justify-center absolute right-1 top-1 px-4 h-9 bg-blue-600 border border-blue-600 text-white rounded-lg w-28"
+          className="flex font-5 text-sm items-center justify-center absolute right-1 top-1 px-4 h-9 bg-orange-500 border border-orange-500 text-white rounded-lg w-28"
           type="submit"
         >
           {form.state === 'loading' ? <LoadingSpinner /> : 'Subscribe'}
@@ -67,7 +67,7 @@ export default function Subscribe() {
       ) : form.state === 'success' ? (
         <SuccessMessage>{form.message}</SuccessMessage>
       ) : (
-        <p className="font-4 text-xs">
+        <p className="text-xs text-gray-900">
           By clicking ‘Subscribe’, you agree to receive marketing emails from Business Hi-Lite as well as other partner offers and accept our
            <a href="/terms" className="text-blue-500 border-none">
            &nbsp;Terms of Service 

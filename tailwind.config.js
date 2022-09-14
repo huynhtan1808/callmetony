@@ -2,21 +2,22 @@ const { colors, fontFamily } = require(`tailwindcss/defaultTheme`);
 
 module.exports = {
   content: ["./src/components/**/*.js", "./src/pages/**/*.js"],
+  darkMode: 'class',
   theme: {
     maxWidth: {
-      '3xl': '768px',
+      '3xl': '728px',
       '6xl': '936px',
       '7xl': '1170px',
     },
     listStyleType: {
       none: 'none',
-     disc: 'disc',
-     decimal: 'decimal',
-     square: 'square',
-     roman: 'upper-roman',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
+      roman: 'upper-roman',
     },
     dropShadow: {
-      'logo': '-2px 3px 0px #fdba74',
+      'logo': '-3px 3px 0px #fb923c',
     },
     boxShadow: {
       'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -40,9 +41,21 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#faf0ed',
+        primary: '#ea580c',
         secondary: '#3472d5',
-        default: '#1A202C'
+        default: '#1A202C',
+        gray: {
+          0: '#fff',
+          100: '#fafafa',
+          200: '#eaeaea',
+          300: '#999999',
+          400: '#888888',
+          500: '#666666',
+          600: '#444444',
+          700: '#333333',
+          800: '#222222',
+          900: '#111111'
+        }
       },
       container: {
         center: true,
@@ -51,13 +64,70 @@ module.exports = {
           md: "0rem",
         },
       },
-      screens: {
-        'md': '768px',
-        'lg': '992px',
-        'xl': '1280px',
-        'xxl': '1440px',
-      },
       filter: ['hover', 'focus'],
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.700'),
+            a: {
+              color: theme('colors.blue.500'),
+              '&:hover': {
+                color: theme('colors.blue.700')
+              },
+              code: { color: theme('colors.blue.400') }
+            },
+            thead: {
+              borderBottomColor: theme('colors.gray.200')
+            },
+            code: { color: theme('colors.pink.500') },
+            'blockquote p:first-of-type::before': false,
+            'blockquote p:last-of-type::after': false
+          }
+        },
+        dark: {
+          css: {
+            color: theme('colors.gray.200'),
+            a: {
+              color: theme('colors.blue.400'),
+              '&:hover': {
+                color: theme('colors.blue.600')
+              },
+              code: { color: theme('colors.blue.400') }
+            },
+            blockquote: {
+              borderLeftColor: theme('colors.gray.700'),
+              color: theme('colors.gray.300')
+            },
+            'h2,h3,h4': {
+              color: theme('colors.gray.100'),
+              
+            },
+            hr: { borderColor: theme('colors.gray.700') },
+            ol: {
+              li: {
+                '&:before': { color: theme('colors.gray.500') }
+              }
+            },
+            ul: {
+              li: {
+                '&:before': { backgroundColor: theme('colors.gray.500') }
+              }
+            },
+            strong: { color: theme('colors.gray.100') },
+            thead: {
+              th: {
+                color: theme('colors.gray.100')
+              },
+              borderBottomColor: theme('colors.gray.600')
+            },
+            tbody: {
+              tr: {
+                borderBottomColor: theme('colors.gray.700')
+              }
+            }
+          }
+        }
+      })
     },
     variants: {
       fill: ['hover', 'focus'],

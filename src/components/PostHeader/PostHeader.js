@@ -3,7 +3,7 @@ import Container from 'components/Container';
 
 const PostHeader = ({ children }) => {
   return (
-    <header className="mt-8 z-40 relative">
+    <header className="pt-12">
       {children}
     </header>
   );

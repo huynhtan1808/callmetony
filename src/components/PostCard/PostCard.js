@@ -26,7 +26,7 @@ const PostCard = ({ post, options = {} }) => {
       <Link href={postPathBySlug(slug)}>
         <a className="cursor-pointer">
           <div className="h-full md:flex">
-          <div className="md:w-1/2 bg-cover overflow-hidden h-72"> 
+          <div className="md:w-1/2 bg-cover overflow-hidden h-72 featuredImage"> 
           {featuredImage && (
           <FeaturedImage
             {...featuredImage}
@@ -37,14 +37,14 @@ const PostCard = ({ post, options = {} }) => {
           </div>
           <div className="md:w-1/2 pt-4 md:pt-0 md:pl-6 flex flex-col justify-start leading-normal"> 
           <h2
-            className="text-3xl font-semibold font-title"
+            className="text-3xl font-semibold"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
           {excerpt && (
             <div
-              className="py-2 text-gray-600"
+              className="py-2 text-gray-600 dark:text-gray-400"
               dangerouslySetInnerHTML={{
                 __html: sanitizeExcerpt(excerpt),
               }}

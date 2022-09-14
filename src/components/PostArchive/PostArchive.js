@@ -24,8 +24,8 @@ const PostArchive = ({ post, options = {} }) => {
     <div>
       <Link href={postPathBySlug(slug)}>
         <a>
-          <div >
-          <div className="img-height">
+          <div>
+          <div className="thumbnailImage">
           {featuredImage && (
           <FeaturedImage
             {...featuredImage}
@@ -36,13 +36,12 @@ const PostArchive = ({ post, options = {} }) => {
           </div>
           <div className="px-5 py-4">
           <h2
-            className="text-xl font-semibold font-title postTitle mb-3"
+            className="text-lg font-semibold mb-3"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
             <Metadata
-              className="text-sm"
               date={date}
             />
           </div>  

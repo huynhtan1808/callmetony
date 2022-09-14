@@ -18,14 +18,14 @@ const Footer = () => {
   const hasMenu = hasRecentPosts || hasRecentCategories;
 
   return (
-    <footer className="mt-20 py-16 md:px-4 bg-orange-50 font-4 text-gray-700">
+    <footer className="mt-20 py-16 md:px-4 font-4 text-gray-800 dark:text-gray-200">
       <Container>
       {hasMenu && (
         <Section className="max-w-7xl mx-auto">
             <ul className="flex flex-col items-top lg:flex-row lg:justify-between">
             <div className="py-2 leading-5 logo-wrap text-xl">
             <Link href="/">
-              <a className="fill-black">
+              <a className="fill-black dark:fill-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" className="hover:drop-shadow-logo" width="auto" height="25px" viewBox="0 0 204.41 53.21">
                 <g data-name="Layer 2">
                   <g data-name="Layer 1">
@@ -58,9 +58,9 @@ const Footer = () => {
                     {recentPosts.map((post) => {
                       const { id, slug, title } = post;
                       return (
-                        <li className="mb-4 text-gray-500 hover:text-gray-800" key={id}>
+                        <li className="mb-4 text-gray-400 dark:text-gray-300" key={id}>
                           <Link href={postPathBySlug(slug)}>
-                            <a>{title}</a>
+                            <a className="hover:text-orange-500">{title}</a>
                           </Link>
                         </li>
                       );
@@ -79,9 +79,9 @@ const Footer = () => {
                     {categories.map((category) => {
                       const { id, slug, name } = category;
                       return (
-                        <li className="mb-4 text-gray-500 hover:text-gray-800" key={id}>
+                        <li className="mb-4 text-gray-400 dark:text-gray-300" key={id}>
                           <Link href={categoryPathBySlug(slug)}>
-                            <a>{name}</a>
+                            <a className="hover:text-orange-500">{name}</a>
                           </Link>
                         </li>
                       );
@@ -93,12 +93,12 @@ const Footer = () => {
                 <p className="font-medium">
                   About
                 </p>
-                <ul className="block my-4 text-sm">
-                  <li className="mb-4 text-sm text-gray-500 hover:text-gray-800">
-                    <a href="/about">About us</a>
+                <ul className="block my-4 text-sm text-gray-400 dark:text-gray-300">
+                  <li className="mb-4 ">
+                    <a className="hover:text-orange-500" href="/about">About us</a>
                   </li>
-                  <li className="mb-4 text-gray-500 hover:text-gray-800">
-                    <a href="mailto:info@businesshilite.com">Contact us</a>
+                  <li className="mb-4">
+                    <a className="hover:text-orange-500" href="mailto:info@businesshilite.com">Contact us</a>
                   </li>
                 </ul>
               </li>
@@ -106,12 +106,12 @@ const Footer = () => {
                 <p className="font-medium">
                   More
                 </p>
-                <ul className="block my-4">
-                  <li className="mb-4 text-sm text-gray-500 hover:text-gray-800">
-                    <a href="/feed.xml">RSS</a>
+                <ul className="block my-4 text-sm text-gray-400 dark:text-gray-300">
+                  <li className="mb-4">
+                    <a className="hover:text-orange-500" href="/feed.xml">RSS</a>
                   </li>
-                  <li className="mb-4 text-sm text-gray-500 hover:text-gray-800">
-                    <a href="/sitemap.xml">Sitemap</a>
+                  <li className="mb-4">
+                    <a className="hover:text-orange-500" href="/sitemap.xml">Sitemap</a>
                   </li>
                 </ul>
               </li>
@@ -121,7 +121,7 @@ const Footer = () => {
       )}
 
       <Section className="max-w-7xl mx-auto">
-        <div className="font-4 text-sm pt-16 text-gray-500">
+        <div className="font-4 text-sm pt-16 text-gray-400 dark:text-gray-300">
           <p>
             &copy; {new Date().getFullYear()} {title}
           </p>

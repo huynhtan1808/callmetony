@@ -15,7 +15,7 @@ import PostArchive from 'components/PostArchive';
 const DEFAULT_POST_OPTIONS = {};
 
 export default function TemplateArchive({
-  title = 'Archive',
+  title = 'Chuyên mục',
   Title,
   posts,
   postOptions = DEFAULT_POST_OPTIONS,
@@ -40,11 +40,10 @@ export default function TemplateArchive({
       <WebpageJsonLd title={title} description={metadata.description} siteTitle={siteMetadata.title} slug={slug} />
 
       <Header>
-          <div className="max-w-6xl md:px-6 mx-auto">
-          <h1 className="title">{Title || title}</h1>
+          <div className="max-w-6xl md:px-6 mx-auto prose">
+          <h1 className="mb-2 dark:text-white">{title || Title}</h1>
           {metadata.description && (
             <p
-              className=""
               dangerouslySetInnerHTML={{
                 __html: metadata.description,
               }}
@@ -61,7 +60,7 @@ export default function TemplateArchive({
               <ul className="blogList">
                 {posts.map((post) => {
                   return (
-                    <li key={post.slug} className="bg-white dropShadow pb-2 md:pt-0 rounded">
+                    <li key={post.slug} className="bg-white dark:bg-gray-800 dropShadow pb-2 md:pt-0 rounded-lg">
                       <PostArchive post={post} options={postOptions} />
                     </li>
                   );

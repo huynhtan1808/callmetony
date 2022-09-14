@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { useRouter } from "next/router";
 import Link from 'next/link';
 import { MdOutlineMenu, MdOutlineSearch, MdMailOutline  } from 'react-icons/md';
+import { useTheme } from 'next-themes';
 
 import useSite from 'hooks/use-site';
 import useSearch, { SEARCH_STATE_LOADED } from 'hooks/use-search';
@@ -189,14 +190,19 @@ const Nav = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
   return (
     <>
-    <nav className="bg-white top-0 z-50 shadow py-2 md:py-0">
+    <nav className="top-0 py-2">
     <Container>
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
           <div className="flex items-center space-x-8">
           <Link href="/">
-          <a className="fill-black">
+          <a className="fill-black dark:fill-gray-100">
           <svg xmlns="http://www.w3.org/2000/svg" className="hover:drop-shadow-logo" width="auto" height="25px" viewBox="0 0 204.41 53.21">
             <g data-name="Layer 2">
               <g data-name="Layer 1">
@@ -206,7 +212,7 @@ const Nav = () => {
           </svg>
           </a>
           </Link>
-        <ul className="text-base text-black font-normal hidden lg:flex space-x-7 md:space-x-8 py-5">
+        <ul className="hidden lg:flex text-gray-800 dark:text-gray-300 space-x-8 py-5">
           {navigation?.map((listItem) => {
             return <NavListItem key={listItem.id} item={listItem} />;
           })}
@@ -215,26 +221,26 @@ const Nav = () => {
           
         <div className="flex font-4 items-center">
           {searchVisibility === SEARCH_HIDDEN && (
-            <button className="text-xl cursor-pointer md:py-4 md:px-7 mr-2 md:mr-1" onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>
+            <button className="text-xl cursor-pointer md:py-4 md:px-2 mr-2 md:mr-1" onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>
               <span className="sr-only">Toggle Search</span>
-              <MdOutlineSearch className="fill-black w-7 h-7"/>
+              <MdOutlineSearch className="fill-gray-800 dark:fill-gray-200 w-7 h-7"/>
             </button>
           )}
           {searchVisibility === SEARCH_VISIBLE && (
-            <form className="md:flex absolute top-0 left-1 md:relative md:w-full md:h-full justify-center	items-start p-2 md:p-3" ref={formRef} action="/search" data-search-is-active={!!query}>
+            <form className="md:flex absolute top-0 left-3 md:left-0 md:relative md:w-94 md:h-full justify-center	items-start p-2 md:p-3" ref={formRef} action="/search" data-search-is-active={!!query}>
               <input
-              className="bg-gray-100 w-72 p-2 md:px-4 text-md focus:outline-none"
+              className="bg-gray-200 dark:bg-gray-600 w-64 p-2 md:px-4 text-md focus:outline-none rounded"
                 type="search"
                 name="q"
                 value={query || ''}
                 onChange={handleOnSearch}
                 autoComplete="off"
-                placeholder="Search..."
+                placeholder="Tìm kiếm..."
                 required
               />
               <div className="absolute top-full z-50 w-96 left-0 md:-left-20">
                 {results.length > 0 && (
-                  <div className="shadow-lg bg-white p-5 border-secondary border-t-4">
+                  <div className="shadow-lg bg-white dark:bg-gray-800 p-5 border-secondary border-t-4">
                   <ul>
                     {results.map(({ slug, title }, index) => {
                       return (
@@ -258,12 +264,47 @@ const Nav = () => {
               </div>
             </form>
           )}
-          {/* CTA Button */}
+          <button
+            aria-label="Toggle Dark Mode"
+            type="button"
+            className="w-10 h-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+            onClick={() =>
+              setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+            }
+          >
+            {mounted && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                className="w-5 h-5 text-gray-800 dark:text-gray-200"
+              >
+                {resolvedTheme === 'dark' ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                  />
+                )}
+              </svg>
+            )}
+          </button>
+          {/* CTA Button 
           <Button href="/" className="">
           <a className="hidden lg:flex uppercase px-3 md:px-4 py-2 rounded-lg text-black mr-2 md:mr-0">
             <span>Subscribe</span>
           </a>
           </Button>
+          */}
           {/* Hamburger menu on mobile */}
         <MobileMenu />
         </div>

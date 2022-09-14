@@ -4,13 +4,13 @@ import usePageMetadata from 'hooks/use-page-metadata';
 import TemplateArchive from 'templates/archive';
 
 export default function Posts({ posts, pagination }) {
-  const title = `All Posts`;
+  const title = `Tất cả bài viết`;
   const slug = 'post';
 
   const { metadata } = usePageMetadata({
     metadata: {
       title,
-      description: `Page ${pagination.currentPage}`,
+      description: `Trang ${pagination.currentPage}`,
     },
   });
 

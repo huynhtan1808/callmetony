@@ -11,7 +11,7 @@ export default function Category({ category, posts }) {
   const { metadata } = usePageMetadata({
     metadata: {
       ...category,
-      description: description || category.og?.description || `Read ${posts.length} posts from ${name}`,
+      description: description || category.og?.description || `Top ${posts.length} bài viết nổi bật trong danh mục ${name}`,
     },
   });
 
