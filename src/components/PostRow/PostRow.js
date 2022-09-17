@@ -25,7 +25,7 @@ const PostList = ({ post, options = {} }) => {
       <Link href={postPathBySlug(slug)}>
         <a>
           <div >
-          <div className="featuredImage">
+          <div className="featuredThumbnailImage">
           {featuredImage && (
           <FeaturedImage
             {...featuredImage}

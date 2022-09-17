@@ -52,7 +52,7 @@ export default function Post({ post, socialImage, related }) {
   .use(() => {
     return (tree) => {
       visit(tree, 'element', (node) => {
-        if (node.tagName === ['h2', 'h3']) {
+        if (node.tagName === 'h3') {
           const id = parameterize(node.children[0].value);
           node.properties.id = id;
           
