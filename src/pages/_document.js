@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=UA-199869455-1`}
+            src={`https://www.googletagmanager.com/gtag/js?id=G-4D7RZC8GR5`}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'UA-199869455-1', {
+            gtag('config', 'G-4D7RZC8GR5', {
               page_path: window.location.pathname,
             });
           `,
