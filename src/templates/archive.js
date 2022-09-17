@@ -60,7 +60,7 @@ export default function TemplateArchive({
               <ul className="grid md:grid-cols-3 gap-6">
                 {posts.map((post) => {
                   return (
-                    <li key={post.slug} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 pb-2 md:pt-0 rounded-lg transform hover:scale-[1.01] transition-all">
+                    <li key={post.slug} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pb-2 md:pt-0 rounded-lg transform hover:scale-[1.01] transition-all">
                       <PostArchive post={post} options={postOptions} />
                     </li>
                   );
