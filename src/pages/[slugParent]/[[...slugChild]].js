@@ -60,14 +60,14 @@ export default function Page({ page, breadcrumbs }) {
             dangerouslySetInnerHTML={featuredImage.caption}
           />
         )}
-        <h1 className="title max-w-3xl mx-auto">{title}</h1>
+        <h1 className="text-4xl font-bold max-w-3xl mx-auto">{title}</h1>
       </Header>
 
       <Content>
         <Section>
           <Container>
             <div
-              className="mt-6 prose prose-lg max-w-3xl mx-auto"
+              className="mt-6 prose dark:prose-dark max-w-3xl mx-auto"
               dangerouslySetInnerHTML={{
                 __html: content,
               }}

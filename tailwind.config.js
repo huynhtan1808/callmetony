@@ -1,13 +1,13 @@
 const { colors, fontFamily } = require(`tailwindcss/defaultTheme`);
 
 module.exports = {
-  content: ["./src/components/**/*.js", "./src/pages/**/*.js"],
+  content: ["./src/components/**/*.js", "./src/pages/**/*.js", "./src/templates/**/*.js"],
   darkMode: 'class',
   theme: {
     maxWidth: {
       '3xl': '728px',
       '6xl': '936px',
-      '7xl': '1170px',
+      '7xl': '1052px',
     },
     listStyleType: {
       none: 'none',
@@ -17,7 +17,8 @@ module.exports = {
       roman: 'upper-roman',
     },
     dropShadow: {
-      'logo': '-3px 3px 0px #fb923c',
+      'orange': '-3px 3px 0px #f97316',
+      'logo': '3px 3px 0px #f97316',
     },
     boxShadow: {
       'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',

@@ -21,7 +21,7 @@
   }
   
   .menu {
-    @apply w-64 h-screen top-0;
+    @apply w-full h-screen top-14;
     z-index: 1000;
     opacity: 0;
     left: 0;

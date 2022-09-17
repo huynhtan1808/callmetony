@@ -28,7 +28,7 @@ const Metadata = ({ author, date, categories, options = DEFAULT_METADATA_OPTIONS
               />
             )}
             <Link href={authorPathByName(author.name)}>
-              <a className="no-underline font-semibold ml-1 text-gray-700 dark:text-gray-300" rel="author">{author.name}</a>
+              <a className="no-underline font-semibold ml-2 text-gray-700 dark:text-gray-300" rel="author">{author.name}</a>
             </Link>
             <span className="mx-2">-</span>
           </address>

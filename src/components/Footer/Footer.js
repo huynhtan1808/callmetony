@@ -21,8 +21,9 @@ const Footer = () => {
     <footer className="mt-20 py-16 md:px-4 font-4 text-gray-800 dark:text-gray-200">
       <Container>
       {hasMenu && (
-        <Section className="max-w-7xl mx-auto">
+        <Section className="max-w-6xl md:px-6 mx-auto">
             <ul className="flex flex-col items-top lg:flex-row lg:justify-between">
+            {/*
             <div className="py-2 leading-5 logo-wrap text-xl">
             <Link href="/">
               <a className="fill-black dark:fill-gray-200">
@@ -47,6 +48,7 @@ const Footer = () => {
               </a>
             </span>
           </div>
+          */}
               {hasRecentPosts && (
                 <li>
                   <Link href="/post">
@@ -120,7 +122,7 @@ const Footer = () => {
         </Section>
       )}
 
-      <Section className="max-w-7xl mx-auto">
+      <Section className="max-w-6xl md:px-6 mx-auto">
         <div className="font-4 text-sm pt-16 text-gray-400 dark:text-gray-300">
           <p>
             &copy; {new Date().getFullYear()} {title}

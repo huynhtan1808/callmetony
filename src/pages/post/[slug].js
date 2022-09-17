@@ -2,6 +2,8 @@ import { RefObject, useEffect, useState } from 'react'
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
 
+import rehype from 'rehype'
+import rehypePrism from 'rehype-prism-plus'
 import rehypeParse from 'rehype-parse/lib';
 import rehypeStringify from 'rehype-stringify/lib';
 import { unified } from 'unified';
@@ -50,7 +52,7 @@ export default function Post({ post, socialImage, related }) {
   .use(() => {
     return (tree) => {
       visit(tree, 'element', (node) => {
-        if (node.tagName === 'h3') {
+        if (node.tagName === ['h2', 'h3']) {
           const id = parameterize(node.children[0].value);
           node.properties.id = id;
           
@@ -72,8 +74,7 @@ export default function Post({ post, socialImage, related }) {
   })
   .use(rehypeStringify)
   .processSync(post.content)
-  .toString();
-
+  .toString()
 
   const { metadata: siteMetadata = {}, homepage } = useSite();
 
@@ -125,7 +126,7 @@ export default function Post({ post, socialImage, related }) {
               </Link>
               </span>
               <h1
-                className="pt-4 dark:text-white"
+                className="pt-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white"
                 dangerouslySetInnerHTML={{
                   __html: title,
                 }}
@@ -146,7 +147,6 @@ export default function Post({ post, socialImage, related }) {
                 options={metadataOptions}
                 isSticky={isSticky}
               />
-              <p className="text-gray-700 dark:text-gray-300 m-0 text-sm">Cập nhật vào lúc {formatDate(modified)}.</p>
               </PostHeader>
               
               <div className="featuredImage"> 
@@ -158,14 +158,17 @@ export default function Post({ post, socialImage, related }) {
                 />
                 )}
               </div>
-              <div className="toc">
+              <p className="text-gray-700 dark:text-gray-300 m-0 text-sm">
+                Cập nhật vào lúc {formatDate(modified)}.
+              </p>
+              <div className="pb-3">
                 <p className="font-medium mb-2 uppercase tracking-tight">
                 Mục lục
                 </p>
                 <ul className="list-none pl-0">
                   {toc.map(({ id, title }) => {
                   return (
-                    <li  className="m-0" key={id}>
+                    <li key={id}>
                     <a className="no-underline" href={`#${id}`}>
                       { title }
                     </a>
@@ -190,7 +193,7 @@ export default function Post({ post, socialImage, related }) {
         <div className="md:max-w-3xl mx-auto">
         <Subscribe />
         {Array.isArray(relatedPostsList) && relatedPostsList.length > 0 && (            
-          <div className="border-t border-gray-300 py-10">
+          <div className="border-t border-gray-600 mt-10 py-10">
             {relatedPostsTitle.name ? (
               <span className="text-2xl font-semibold">
                 Cùng chuyên mục{' '}
@@ -203,7 +206,7 @@ export default function Post({ post, socialImage, related }) {
               )}
               <ul className="blogList pl-0 pt-5">
                 {relatedPostsList.map((post) => (
-                  <li className="list-none bg-white dark:bg-gray-800 cursor-pointer dropShadow rounded" key={post.title}>
+                  <li className="list-none bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 cursor-pointer rounded" key={post.title}>
                     <Link href={postPathBySlug(post.slug)}>
                     <div className="imgThumbnail">
                     {post.featuredImage && (

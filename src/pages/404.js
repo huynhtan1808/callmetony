@@ -16,11 +16,11 @@ export default function Custom404() {
       <Section>
         <Container>
           <div className="text-center">
-          <h1 className="title pt-20 pb-5">Page Not Found</h1>
+          <h1 className="text-3xl font-bold pt-20 pb-5">Page Not Found</h1>
           <span>The page you were looking for could not be found.</span>
           <p className="py-10">
             <Link href="/">
-              <a className="bg-secondary py-4 px-10 rounded-lg text-white font-5">Go back home</a>
+              <a className="bg-orange-500 py-4 px-10 rounded-lg text-white font-5">Go back home</a>
             </Link>
           </p>
           </div>

@@ -199,11 +199,11 @@ const Nav = () => {
     <>
     <nav className="top-0 py-2">
     <Container>
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
+        <div className="max-w-6xl md:px-6 mx-auto flex flex-wrap items-center justify-between">
           <div className="flex items-center space-x-8">
           <Link href="/">
-          <a className="fill-black dark:fill-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" className="hover:drop-shadow-logo" width="auto" height="25px" viewBox="0 0 204.41 53.21">
+          <a className="fill-black dark:fill-white">
+          <svg xmlns="http://www.w3.org/2000/svg" className="drop-shadow-orange hover:drop-shadow-logo" width="auto" height="25px" viewBox="0 0 204.41 53.21">
             <g data-name="Layer 2">
               <g data-name="Layer 1">
                 <path d="M27.07 12v40.13H15.7V12H0V1.08h42.84V12ZM72.22 0c14.33 0 26.5 10.44 26.5 26.64s-12.17 26.57-26.5 26.57-26.57-10.44-26.57-26.57S57.82 0 72.22 0Zm0 42c7.06 0 14.69-4.75 14.69-15.41s-7.63-15.5-14.69-15.5-14.76 4.82-14.76 15.48S65.09 42 72.22 42ZM139.18 52.13l-21-33.55v33.55h-11.3V1.08h13.82l19.16 31v-31h11.34v51.05ZM157.39 1.08h13.32L181.15 20l10.59-18.92h12.67l-17.93 29.74v21.31H175.1V30.82Z"/>
@@ -267,7 +267,7 @@ const Nav = () => {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            className="w-10 h-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+            className="w-8 h-8 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
             onClick={() =>
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
             }
