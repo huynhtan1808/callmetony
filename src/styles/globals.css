@@ -49,25 +49,38 @@ b, strong {
   font-weight: 500;
 }
 
+.prose pre {
+  @apply border border-gray-200 dark:border-gray-700;
+}
+
+.prose code {
+  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-lg bg-transparent;
+}
+
+.prose pre code {
+  @apply text-gray-200 dark:text-gray-200 p-0;
+  border: initial;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply text-gray-800 dark:text-gray-50;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
 .sub-menu ul>li{
   @apply pb-4;
 }
 
 .prose img {
   @apply m-auto;
-}
-.prose code {
-  @apply text-gray-800 dark:text-gray-200 bg-gray-200 dark:bg-gray-800 px-1 py-0.5 border border-gray-200 dark:border-gray-600 rounded-lg;
-}
-
-.prose pre code {
-  @apply text-gray-200 bg-transparent dark:bg-transparent p-0;
-  border: initial;
-}
-
-code[class*='language-'],
-pre[class*='language-'] {
-  @apply text-gray-50;
 }
 
 .prose ol {
