@@ -126,7 +126,7 @@ export default function Post({ post, socialImage, related }) {
               </Link>
               </span>
               <h1
-                className="pt-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white"
+                className="pt-4 text-3xl font-bold text-black md:text-5xl dark:text-white"
                 dangerouslySetInnerHTML={{
                   __html: title,
                 }}

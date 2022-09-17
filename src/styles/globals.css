@@ -83,6 +83,10 @@ pre {
   @apply m-auto;
 }
 
+.prose ul>li {
+  @apply pl-0;
+}
+
 .prose ol {
   @apply list-decimal list-outside list-none pl-0;
 }
@@ -143,7 +147,7 @@ table {
 }
 
 .avatar img{
-  @apply mx-auto rounded-full m-5 w-[121px] h-[121px];
+  @apply mx-auto rounded-full w-[121px] h-[121px];
 }
 
 .blogList {
