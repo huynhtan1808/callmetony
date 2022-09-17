@@ -199,7 +199,7 @@ const Nav = () => {
     <>
     <nav className="top-0 py-2">
     <Container>
-        <div className="max-w-6xl md:px-6 mx-auto flex flex-wrap items-center justify-between">
+        <div className="max-w-6xl md:px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="flex items-center space-x-8">
           <Link href="/">
           <a className="fill-black dark:fill-white">
