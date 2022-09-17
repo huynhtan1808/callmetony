@@ -21,7 +21,12 @@
   }
   
   .menu {
-    @apply w-full h-screen top-14;
+    top: 56px;
+    padding: 0 24px 0 24px;
+    margin: 0;
+    padding-top: 24px;
+    width: 100%;
+    height: 100vh;
     z-index: 1000;
     opacity: 0;
     left: 0;
@@ -35,39 +40,21 @@
       border-color 300ms ease;
     width: 0px;
     white-space: nowrap;
-    font-size: 20px;
-    text-transform: uppercase;
   }
 
-  .menu li a{
-    padding: 10px 20px;
-    margin-bottom: 40px;
-  }
-
-  .mobileMenu {
-    @apply bg-white w-full;
-    opacity: 0;
-    left: 0;
-    transition: opacity 300ms ease, transform 300ms ease;
-  }
-  .mobileMenu li{
-    transform: translateX(-16px);
-    opacity: 0;
-    transition: opacity 300ms ease, transform 300ms ease, width 300ms ease,
-      border-color 300ms ease;
-    font-size: 18px;
-  }
-  
   .menuRendered {
     opacity: 1;
   }
   
   .menuRendered li {
-    @apply border-b border-gray-200 py-5 w-full;
+    @apply w-full;
     transform: translateX(0);
     opacity: 1;
   }
 
+  .menu > * + * {
+    margin-top: 24px;
+  }
   
   @keyframes grow {
     0% {

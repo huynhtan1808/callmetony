@@ -47,7 +47,7 @@ const MobileNavItem = ({ item }) => {
 
   return (
     <li
-    className="cursor-pointer hover:text-secondary" 
+    className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 font-semibold pb-4" 
     key={item.id}
     onClick={toggleMenu}
     >
