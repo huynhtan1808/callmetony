@@ -43,7 +43,7 @@ export default function Subscribe() {
   return (
     <div id="subscribe" className="textborder border-orange-100 bg-orange-50 dark:bg-gray-600 rounded p-6 my-4 w-full dark:border-gray-800">
       <p className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
-        Sign up for the Business Hi-Lite newsletter for the latest news and analysis delivered straight to your inbox.
+      Quan tâm đến việc cải thiện kiến thức của bạn về WordPress, React/NextJs và Marketing online? Đăng ký bản tin để nhận cập nhật miễn phí.
       </p>
       <form className="relative my-4 rounded-lg" onSubmit={subscribe}>
         <input
@@ -59,7 +59,7 @@ export default function Subscribe() {
           className="flex font-5 text-sm items-center justify-center absolute right-1 top-1 px-4 h-9 bg-orange-500 border border-orange-500 text-white rounded-lg w-28"
           type="submit"
         >
-          {form.state === 'loading' ? <LoadingSpinner /> : 'Subscribe'}
+          {form.state === 'loading' ? <LoadingSpinner /> : 'Đăng ký'}
         </button>
       </form>
       {form.state === 'error' ? (
@@ -68,15 +68,15 @@ export default function Subscribe() {
         <SuccessMessage>{form.message}</SuccessMessage>
       ) : (
         <p className="text-xs text-gray-900 dark:text-white ">
-          By clicking ‘Subscribe’, you agree to receive marketing emails from Business Hi-Lite as well as other partner offers and accept our
-           <a href="/terms" className="text-blue-500 border-none">
-           &nbsp;Terms of Service 
+          Bằng cách nhấp vào nút 'Đăng ký', bạn đồng ý nhận email tiếp thị từ Tony Huỳnh cũng như các đề nghị của đối tác khác và chấp nhận
+           <a href="/dieu-khoan-su-dung" className="text-blue-500 border-none">
+           {' '} Điều khoản sử dụng 
            </a>
-           &nbsp;and
-           <a href="/privacy-policy" className="text-blue-500 border-none">
-           &nbsp;Privacy Policy
+           {' '} và
+           <a href="/chinh-sach-bao-mat" className="text-blue-500 border-none">
+           {' '} Chính sách bảo mật {' '}
            </a>
-           .
+            của tôi.
         </p>
       )}
     </div>

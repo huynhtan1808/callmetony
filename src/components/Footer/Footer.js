@@ -53,7 +53,7 @@ const Footer = () => {
                 <li>
                   <Link href="/post">
                     <a className="font-medium">
-                      Recent Posts
+                      Bài viết mới nhất
                     </a>
                   </Link>
                   <ul className="block my-4 text-sm">
@@ -74,7 +74,7 @@ const Footer = () => {
                 <li className="mb-4">
                   <Link href="/categories/">
                     <a className="font-medium">
-                      Categories
+                      Danh mục
                     </a>
                   </Link>
                   <ul className="block my-4 text-sm">
@@ -127,19 +127,15 @@ const Footer = () => {
           <p>
             &copy; {new Date().getFullYear()} {title}
           </p>
-          <p className="">Registration on or use of this site constitutes acceptance of our  
-          <a href="/terms" className="hover:text-blue-500">
-          &nbsp;Terms of Service
+          <p className="">Việc đăng ký hoặc sử dụng trang web này cấu thành sự chấp nhận
+          <a href="/dieu-khoan-su-dung" className="hover:text-blue-500">
+          {' '} Điều khoản Dịch vụ 
           </a>
           , 
-          <a href="/privacy-policy" className="hover:text-blue-500">
-          &nbsp;Privacy Policy
+          <a href="/chinh-sach-bao-mat" className="hover:text-blue-500">
+          {' '} Chính sách Bảo mật
           </a>
-          &nbsp;and
-          <a href="/privacy-policy#cookies" className="hover:text-blue-500">
-          &nbsp;Cookies Policy
-          </a>
-          .</p>
+          của tôi.</p>
         </div>
       </Section>
       </Container>
