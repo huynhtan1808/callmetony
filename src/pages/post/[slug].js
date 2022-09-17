@@ -133,7 +133,7 @@ export default function Post({ post, socialImage, related }) {
               />
             {excerpt && (
             <div
-              className="text-gray-600 dark:text-gray-400"
+              className="text-gray-500 dark:text-gray-400"
               dangerouslySetInnerHTML={{
                 __html: sanitizeExcerpt(excerpt),
               }}

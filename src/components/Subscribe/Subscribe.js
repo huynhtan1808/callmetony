@@ -69,10 +69,6 @@ export default function Subscribe() {
       ) : (
         <p className="text-xs text-gray-900 dark:text-white ">
           Bằng cách nhấp vào nút 'Đăng ký', bạn đồng ý nhận email tiếp thị từ Tony Huỳnh cũng như các đề nghị của đối tác khác và chấp nhận
-           <a href="/dieu-khoan-su-dung" className="text-blue-500 border-none">
-           {' '} Điều khoản sử dụng 
-           </a>
-           {' '} và
            <a href="/chinh-sach-bao-mat" className="text-blue-500 border-none">
            {' '} Chính sách bảo mật {' '}
            </a>
