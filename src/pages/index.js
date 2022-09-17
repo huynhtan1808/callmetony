@@ -64,7 +64,7 @@ export default function Home({ posts, pagination }) {
               </div>
             </div>
             
-            <h2 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-gray-800 dark:text-gray-200 md:px-4 ">
+            <h2 className="font-bold text-2xl md:text-3xl tracking-tight mb-6 text-gray-800 dark:text-gray-200 md:px-4 ">
               Bài viết nổi bật
             </h2>
             <ul className="section-0 md:px-4 w-full my-8">

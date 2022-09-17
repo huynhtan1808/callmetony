@@ -37,7 +37,7 @@ const PostCard = ({ post, options = {} }) => {
           </div>
           <div className="md:w-1/2 pt-4 md:pt-0 md:pl-6 flex flex-col justify-start leading-normal"> 
           <h2
-            className="text-3xl font-semibold"
+            className="text-2xl font-semibold"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
