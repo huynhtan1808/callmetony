@@ -26,7 +26,7 @@ const PostCard = ({ post, options = {} }) => {
       <Link href={postPathBySlug(slug)}>
         <a className="cursor-pointer">
           <div className="h-full md:flex">
-          <div className="md:w-1/2 bg-cover overflow-hidden h-72 featuredImage"> 
+          <div className="md:w-1/2 bg-cover overflow-hidden featuredImage"> 
           {featuredImage && (
           <FeaturedImage
             {...featuredImage}
@@ -52,6 +52,7 @@ const PostCard = ({ post, options = {} }) => {
             )}
             <Metadata
               date={date}
+              categories={categories}
             />
       </div>
       </div>
