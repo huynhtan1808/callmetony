@@ -48,12 +48,12 @@ export default function Home({ posts, pagination }) {
                   Tony Huynh
                 </h1>
                 <h2 className="text-gray-700 dark:text-gray-300 mb-4">
-                  Front-End Web Developer tại{' '}
+                  Web Developer tại{' '}
                   <span className="font-semibold">One Pixel Media</span>
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-16">
                   Giúp mọi người xây dựng website nhanh hơn. Viết về
-                  phát triển web, Wordpress và React / Next.js.
+                  Phát Triển Web, Wordpress và React / Next.js.
                 </p>
               </div>
               <div className="w-[176px] relative mb-8 sm:mb-0 mr-auto avatar filter grayscale">

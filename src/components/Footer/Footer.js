@@ -97,10 +97,10 @@ const Footer = () => {
                 </p>
                 <ul className="block my-4 text-sm text-gray-400 dark:text-gray-300">
                   <li className="mb-4 ">
-                    <a className="hover:text-orange-500" href="/about">About us</a>
+                    <a className="hover:text-orange-500" href="/about">About me</a>
                   </li>
                   <li className="mb-4">
-                    <a className="hover:text-orange-500" href="mailto:info@businesshilite.com">Contact us</a>
+                    <a className="hover:text-orange-500" href="mailto:tanhuynh1808@gmail.com">Contact me</a>
                   </li>
                 </ul>
               </li>
