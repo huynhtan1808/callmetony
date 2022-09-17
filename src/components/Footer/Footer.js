@@ -123,7 +123,7 @@ const Footer = () => {
       )}
 
       <Section className="max-w-6xl md:px-6 mx-auto">
-        <div className="font-4 text-sm pt-16 text-gray-400 dark:text-gray-300">
+        <div className="font-4 text-sm pt-16 text-gray-300 dark:text-gray-600">
           <p>
             &copy; {new Date().getFullYear()} {title}
           </p>
@@ -135,7 +135,7 @@ const Footer = () => {
           <a href="/chinh-sach-bao-mat" className="hover:text-blue-500">
           {' '} Chính sách Bảo mật
           </a>
-          của tôi.</p>
+          {' '} của tôi.</p>
         </div>
       </Section>
       </Container>
