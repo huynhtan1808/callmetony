@@ -53,7 +53,6 @@ export default class MyDocument extends Document {
           `,
             }}
           />
-           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1763279739775162" crossorigin="anonymous" />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />
