@@ -18,11 +18,11 @@ const Footer = () => {
   const hasMenu = hasRecentPosts || hasRecentCategories;
 
   return (
-    <footer className="mt-20 py-16 md:px-4 font-4 text-gray-800 dark:text-gray-200">
+    <footer className="mt-10 py-16 text-gray-800 dark:text-gray-200">
       <Container>
       {hasMenu && (
-        <Section className="max-w-6xl md:px-6 mx-auto">
-            <ul className="flex flex-col items-top lg:flex-row lg:justify-between">
+        <Section className="max-w-6xl mx-auto md:px-6">
+            <ul className="flex flex-col pt-10 items-top lg:flex-row lg:justify-between border-t border-gray-700">
             {/*
             <div className="py-2 leading-5 logo-wrap text-xl">
             <Link href="/">
@@ -62,7 +62,7 @@ const Footer = () => {
                       return (
                         <li className="mb-4 text-gray-400 dark:text-gray-300" key={id}>
                           <Link href={postPathBySlug(slug)}>
-                            <a className="hover:text-orange-500">{title}</a>
+                            <a className="hover:text-emerald-500">{title}</a>
                           </Link>
                         </li>
                       );
@@ -83,7 +83,7 @@ const Footer = () => {
                       return (
                         <li className="mb-4 text-gray-400 dark:text-gray-300" key={id}>
                           <Link href={categoryPathBySlug(slug)}>
-                            <a className="hover:text-orange-500">{name}</a>
+                            <a className="hover:text-emerald-500">{name}</a>
                           </Link>
                         </li>
                       );
@@ -97,10 +97,10 @@ const Footer = () => {
                 </p>
                 <ul className="block my-4 text-sm text-gray-400 dark:text-gray-300">
                   <li className="mb-4 ">
-                    <a className="hover:text-orange-500" href="/about">About me</a>
+                    <a className="hover:text-emerald-500" href="/about">About me</a>
                   </li>
                   <li className="mb-4">
-                    <a className="hover:text-orange-500" href="mailto:tanhuynh1808@gmail.com">Contact me</a>
+                    <a className="hover:text-emerald-500" href="mailto:tanhuynh1808@gmail.com">Contact me</a>
                   </li>
                 </ul>
               </li>
@@ -110,10 +110,10 @@ const Footer = () => {
                 </p>
                 <ul className="block my-4 text-sm text-gray-400 dark:text-gray-300">
                   <li className="mb-4">
-                    <a className="hover:text-orange-500" href="/feed.xml">RSS</a>
+                    <a className="hover:text-emerald-500" href="/feed.xml">RSS</a>
                   </li>
                   <li className="mb-4">
-                    <a className="hover:text-orange-500" href="/sitemap.xml">Sitemap</a>
+                    <a className="hover:text-emerald-500" href="/sitemap.xml">Sitemap</a>
                   </li>
                 </ul>
               </li>

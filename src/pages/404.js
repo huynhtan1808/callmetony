@@ -20,7 +20,7 @@ export default function Custom404() {
           <span>The page you were looking for could not be found.</span>
           <p className="py-10">
             <Link href="/">
-              <a className="bg-orange-500 py-4 px-10 rounded-lg text-white font-5">Go back home</a>
+              <a className="bg-emerald-500 py-4 px-10 rounded-lg text-white font-5">Go back home</a>
             </Link>
           </p>
           </div>

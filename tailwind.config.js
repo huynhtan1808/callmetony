@@ -17,7 +17,7 @@ module.exports = {
       roman: 'upper-roman',
     },
     dropShadow: {
-      'orange': '-3px 3px 0px #f97316',
+      'emerald': '-3px 3px 0px #10b981',
       'logo': '3px 3px 0px #f97316',
     },
     boxShadow: {

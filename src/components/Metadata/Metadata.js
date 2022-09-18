@@ -42,7 +42,7 @@ const Metadata = ({ author, date, categories, options = DEFAULT_METADATA_OPTIONS
         </li>
       )}
       {Array.isArray(categories) && categories[0] && (
-        <li className="ml-5 text-xs font-semibold text-orange-500 hover:text-black uppercase">
+        <li className="ml-5 text-xs font-semibold text-emerald-500 hover:text-gray-400 uppercase">
           {compactCategories && (
             <p title={categories.map(({ name }) => name).join(', ')}>
               <Link href={categoryPathBySlug(categories[0].slug)}>

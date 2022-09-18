@@ -28,7 +28,7 @@ const NavListItem = ({ item }) => {
     <li
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
-    className="relative cursor-pointer hover:text-orange-500" 
+    className="relative cursor-pointer hover:text-emerald-500" 
     key={item.id}
     >
       {!item.path.includes('http') && !item.target && (

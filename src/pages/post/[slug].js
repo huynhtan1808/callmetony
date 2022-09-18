@@ -122,7 +122,7 @@ export default function Post({ post, socialImage, related }) {
             <PostHeader>
               <span className="text-sm font-semibold uppercase">
               <Link href={relatedPostsTitle.link}>
-                  <a className="no-underline text-orange-500 dark:text-orange-500 border-none">{relatedPostsTitle.name}</a>
+                  <a className="no-underline text-emerald-500 dark:text-emerald-500 border-none">{relatedPostsTitle.name}</a>
               </Link>
               </span>
               <h1
@@ -193,7 +193,7 @@ export default function Post({ post, socialImage, related }) {
         <div className="md:max-w-3xl mx-auto">
         <Subscribe />
         {Array.isArray(relatedPostsList) && relatedPostsList.length > 0 && (            
-          <div className="border-t border-gray-600 mt-10 py-10">
+          <div className="border-t border-gray-200 dark:border-gray-600 mt-10 py-10">
             {relatedPostsTitle.name ? (
               <span className="text-2xl font-semibold">
                 Cùng chuyên mục{' '}
