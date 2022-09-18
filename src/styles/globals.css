@@ -46,16 +46,9 @@ b, strong {
   font-weight: 600;
 }
 
-.font-base{
-  font-family: 'IBM Plex Sans', sans-serif;
-}
-.font-title{
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 500;
-}
-
 .prose pre {
   @apply border border-gray-200 dark:border-gray-700;
+  overflow-x: auto;
 }
 
 .prose code {
@@ -80,7 +73,7 @@ pre {
   white-space: pre-wrap;
 }
 
-.sub-menu ul>li{
+.sub-menu ul>li:not(:last-child){
   @apply pb-4;
 }
 
@@ -134,18 +127,6 @@ pre {
 
 .featuredImage img{
   @apply rounded-lg;
-}
-
-#sidebar {
-  flex: 0 0 300px;
-}
-
-@media (min-width: 1440px){
-
-  #sidebar2 {
-    flex: 0 0 300px;
-}
-
 }
 
 .avatar img{

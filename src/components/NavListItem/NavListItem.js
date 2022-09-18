@@ -42,8 +42,8 @@ const NavListItem = ({ item }) => {
         </a>
       )}
       {open && nestedItems.length > 0 && (
-          <div className="sub-menu absolute border">
-            <ul className="text-black bg-white w-full md:w-64 shadow-lg p-4">
+          <div className="sub-menu absolute -ml-4">
+            <ul className="mt-2 text-black dark:text-gray-200 bg-white dark:bg-gray-800 w-full md:w-64 shadow-lg p-4 rounded-lg">
               {nestedItems}
             </ul>
           </div>

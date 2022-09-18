@@ -22,7 +22,7 @@ const Footer = () => {
       <Container>
       {hasMenu && (
         <Section className="max-w-6xl mx-auto md:px-6">
-            <ul className="flex flex-col pt-10 items-top lg:flex-row lg:justify-between border-t border-gray-700">
+            <ul className="flex flex-col pt-10 items-top lg:flex-row lg:justify-between border-t border-gray-200 dark:border-gray-800">
             {/*
             <div className="py-2 leading-5 logo-wrap text-xl">
             <Link href="/">
