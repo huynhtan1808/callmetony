@@ -118,7 +118,7 @@ export default function Post({ post, socialImage, related }) {
       <Content>
         <Section>
           <Container>
-            <div className="link-decor flex flex-col items-start justify-center w-full max-w-3xl mx-auto mb-16 prose dark:porse-dark">
+            <div className="link-decor flex flex-col items-start justify-center w-full max-w-3xl mx-auto mb-16 prose dark:prose-dark">
             <PostHeader>
               <span className="text-sm font-semibold uppercase">
               <Link href={relatedPostsTitle.link}>
@@ -180,7 +180,6 @@ export default function Post({ post, socialImage, related }) {
               </div>
               
               <div
-              className="w-full mt-4 prose dark:prose-dark max-w-none"
                 dangerouslySetInnerHTML={{
                   __html: content,
                 }}
