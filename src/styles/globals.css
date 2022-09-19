@@ -68,9 +68,10 @@ pre[class*='language-'] {
 pre::-webkit-scrollbar {
   display: none;
 }
-
-pre {
-  white-space: pre-wrap;
+@media only screen and (max-width:480px){
+  .prose pre {
+    max-width: 340px;
+  }
 }
 
 .sub-menu ul>li:not(:last-child){

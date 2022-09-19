@@ -118,7 +118,7 @@ export default function Post({ post, socialImage, related }) {
       <Content>
         <Section>
           <Container>
-            <div className="md:max-w-3xl link-decor prose dark:prose-dark mx-auto">
+            <div className="max-w-none md:max-w-3xl link-decor prose dark:prose-dark mx-auto">
             <PostHeader>
               <span className="text-sm font-semibold uppercase">
               <Link href={relatedPostsTitle.link}>
@@ -184,12 +184,9 @@ export default function Post({ post, socialImage, related }) {
                 }}
               />
             </div>
-            </Container>
-          </Section>
-        </Content>
+       
 
-      <Section>
-      <Container>
+      
         <div className="md:max-w-3xl mx-auto">
         <Subscribe />
         {Array.isArray(relatedPostsList) && relatedPostsList.length > 0 && (            
@@ -231,6 +228,7 @@ export default function Post({ post, socialImage, related }) {
         </div>
       </Container>
       </Section>
+      </Content>
     </Layout>
   );
 }
