@@ -1,7 +1,7 @@
 const Section = ({ children, ...rest }) => {
 
   return (
-    <section className="mx-auto" {...rest}>
+    <section {...rest}>
       {children}
     </section>
   );

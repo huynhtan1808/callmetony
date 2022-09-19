@@ -60,7 +60,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className="grid grid-row">
+    <div>
       <Helmet {...helmetSettings} />
       <Nav />
       <Main>{children}</Main>

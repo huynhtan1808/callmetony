@@ -1,6 +1,6 @@
 
 const Container = ({ children }) => {
-  return <div className="px-6 mx-auto">{children}</div>;
+  return <div className="flex flex-col md:px-0 px-6">{children}</div>;
 };
 
 export default Container;

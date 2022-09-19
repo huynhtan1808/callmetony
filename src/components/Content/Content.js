@@ -2,7 +2,7 @@
 
 const Content = ({ children }) => {
 
-  return <div className="w-full post-width mx-auto md:px-6">{children}</div>;
+  return <div className="flex flex-col items-start justify-center w-full max-w-3xl mx-auto mb-16">{children}</div>;
 };
 
 export default Content;

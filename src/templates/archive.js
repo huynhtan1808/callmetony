@@ -40,7 +40,7 @@ export default function TemplateArchive({
       <WebpageJsonLd title={title} description={metadata.description} siteTitle={siteMetadata.title} slug={slug} />
 
       <Header>
-          <div className="max-w-6xl md:px-6 mx-auto prose text-gray-900 dark:text-gray-200">
+          <div className="max-w-6xl w-full mx-auto md:px-4 prose text-gray-900 dark:text-gray-200">
           <h1 className="mb-2 dark:text-white">{title || Title}</h1>
           {metadata.description && (
             <p
@@ -50,9 +50,10 @@ export default function TemplateArchive({
             />
           )}
           </div>
+         
       </Header>
 
-      <Section className="max-w-6xl mx-auto contentSection">
+      <Section className="max-w-6xl mx-auto md:px-4">
         <Container>
           {Array.isArray(posts) && (
             <>

@@ -197,9 +197,8 @@ const Nav = () => {
 
   return (
     <>
-    <nav className="top-0 py-2">
-    <Container>
-        <div className="max-w-6xl md:px-4 mx-auto flex flex-wrap items-center justify-between">
+    <div className="flex flex-col justify-center px-6">
+    <nav className="flex items-center justify-between w-full relative max-w-6xl md:px-4 border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
           <div className="flex items-center space-x-8">
           <Link href="/">
           <a className="fill-black dark:fill-white">
@@ -219,7 +218,7 @@ const Nav = () => {
         </ul>
           </div>
           
-        <div className="flex font-4 items-center">
+        <div className="flex items-center">
           {searchVisibility === SEARCH_HIDDEN && (
             <button className="text-xl cursor-pointer md:py-4 md:px-2 mr-2 md:mr-1" onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>
               <span className="sr-only">Toggle Search</span>
@@ -308,9 +307,8 @@ const Nav = () => {
           {/* Hamburger menu on mobile */}
         <MobileMenu />
         </div>
-        </div>
-        </Container>     
     </nav>
+    </div>
     </>
   );
 };

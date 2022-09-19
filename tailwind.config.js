@@ -9,42 +9,9 @@ module.exports = {
       '6xl': '936px',
       '7xl': '1052px',
     },
-    listStyleType: {
-      none: 'none',
-      disc: 'disc',
-      decimal: 'decimal',
-      square: 'square',
-      roman: 'upper-roman',
-    },
-    dropShadow: {
-      'emerald': '-3px 3px 0px #10b981',
-      'logo': '3px 3px 0px #f97316',
-    },
-    boxShadow: {
-      'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
-      'DEFAULT': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-      'md': '0 1px 5px rgba(0, 0, 0, 0.2)',
-      'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-      'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-      '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-      '3xl': '2px 2px 0px #F59E0B;',
-      inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
-      none: 'none',
-    },
-    borderWidth: {
-      DEFAULT: '1px',
-      '0': '0',
-      '2': '2px',
-     '3': '3px',
-      '4': '4px',
-     '6': '6px',
-     '8': '8px',
-    },
     extend: {
       colors: {
-        primary: '#ea580c',
-        secondary: '#3472d5',
-        default: '#1A202C',
+        'blue-opaque': 'rgb(13 42 148 / 18%)',
         gray: {
           0: '#fff',
           100: '#fafafa',
@@ -58,14 +25,9 @@ module.exports = {
           900: '#111111'
         }
       },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: "1rem",
-          md: "0rem",
-        },
+      fontFamily: {
+        sans: ['Inter', ...fontFamily.sans]
       },
-      filter: ['hover', 'focus'],
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -101,7 +63,6 @@ module.exports = {
             },
             'h2,h3,h4': {
               color: theme('colors.gray.100'),
-              
             },
             hr: { borderColor: theme('colors.gray.700') },
             ol: {
@@ -129,10 +90,10 @@ module.exports = {
           }
         }
       })
-    },
-    variants: {
-      fill: ['hover', 'focus'],
-    },
+    }
   },
-  plugins: [require("@tailwindcss/typography")],
+  variants: {
+    typography: ['dark']
+  },
+  plugins: [require('@tailwindcss/typography')]
 };

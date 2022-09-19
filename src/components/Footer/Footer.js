@@ -18,10 +18,10 @@ const Footer = () => {
   const hasMenu = hasRecentPosts || hasRecentCategories;
 
   return (
-    <footer className="mt-10 py-16 text-gray-800 dark:text-gray-200">
+    <footer className="max-w-6xl mx-auto md:px-4 mt-10 py-16 text-gray-800 dark:text-gray-200">
       <Container>
       {hasMenu && (
-        <Section className="max-w-6xl mx-auto md:px-6">
+        <Section>
             <ul className="flex flex-col pt-10 items-top lg:flex-row lg:justify-between border-t border-gray-200 dark:border-gray-800">
             {/*
             <div className="py-2 leading-5 logo-wrap text-xl">
@@ -56,7 +56,7 @@ const Footer = () => {
                       Bài viết mới nhất
                     </a>
                   </Link>
-                  <ul className="block my-4 text-sm">
+                  <ul className="block my-4 text-sm md:pr-2">
                     {recentPosts.map((post) => {
                       const { id, slug, title } = post;
                       return (
@@ -104,26 +104,13 @@ const Footer = () => {
                   </li>
                 </ul>
               </li>
-              <li>
-                <p className="font-medium">
-                  More
-                </p>
-                <ul className="block my-4 text-sm text-gray-400 dark:text-gray-300">
-                  <li className="mb-4">
-                    <a className="hover:text-emerald-500" href="/feed.xml">RSS</a>
-                  </li>
-                  <li className="mb-4">
-                    <a className="hover:text-emerald-500" href="/sitemap.xml">Sitemap</a>
-                  </li>
-                </ul>
-              </li>
             </ul>
           
         </Section>
       )}
 
-      <Section className="max-w-6xl md:px-6 mx-auto">
-        <div className="font-4 text-sm pt-16 text-gray-300 dark:text-gray-600">
+      <Section className="flex flex-row items-end justify-between pt-16">
+        <div className="font-4 text-sm text-gray-300 dark:text-gray-500">
           <p>
             &copy; {new Date().getFullYear()} {title}
           </p>
@@ -136,6 +123,17 @@ const Footer = () => {
           {' '} Chính sách Bảo mật
           </a>
           {' '} của tôi.</p>
+        </div>
+        <div>
+        <ul className="flex text-sm text-gray-300 dark:text-gray-500">
+          <li className="mx-3">
+            <a className="hover:text-emerald-500" href="/feed.xml">RSS</a>
+          </li>
+          <li className="">
+            <a className="hover:text-emerald-500" href="/sitemap.xml">Sitemap</a>
+          </li>
+        </ul>
+              
         </div>
       </Section>
       </Container>

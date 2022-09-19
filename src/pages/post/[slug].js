@@ -118,7 +118,7 @@ export default function Post({ post, socialImage, related }) {
       <Content>
         <Section>
           <Container>
-            <div className="max-w-none md:max-w-3xl link-decor prose dark:prose-dark mx-auto">
+            <div className="link-decor flex flex-col items-start justify-center w-full max-w-3xl mx-auto mb-16 prose dark:porse-dark">
             <PostHeader>
               <span className="text-sm font-semibold uppercase">
               <Link href={relatedPostsTitle.link}>
@@ -141,28 +141,29 @@ export default function Post({ post, socialImage, related }) {
             )}
             
             <Metadata
-                date={date}
-                author={author}
-                category={categories}
-                options={metadataOptions}
-                isSticky={isSticky}
-              />
-              </PostHeader>
+            date={date}
+            author={author}
+            category={categories}
+            options={metadataOptions}
+            isSticky={isSticky}
+            />
+          </PostHeader>
               
-              <div className="featuredImage"> 
-                {featuredImage && (
-                <FeaturedImage
-                  {...featuredImage}
-                  src={featuredImage.sourceUrl}
-                  dangerouslySetInnerHTML={featuredImage.alt}
-                />
-                )}
-              </div>
+          <div className="featuredImage"> 
+            {featuredImage && (
+            <FeaturedImage
+              {...featuredImage}
+              src={featuredImage.sourceUrl}
+              dangerouslySetInnerHTML={featuredImage.alt}
+            />
+            )}
+          </div>
+
               <p className="text-gray-700 dark:text-gray-300 m-0 text-sm">
                 Cập nhật vào lúc {formatDate(modified)}.
               </p>
               <div className="pb-3">
-                <p className="font-medium mb-2 uppercase tracking-tight">
+                <p className="text-gray-800 dark:text-gray-200 font-medium mb-2 uppercase tracking-tight">
                 Mục lục
                 </p>
                 <ul className="list-none pl-0">
@@ -179,6 +180,7 @@ export default function Post({ post, socialImage, related }) {
               </div>
               
               <div
+              className="w-full mt-4 prose dark:prose-dark max-w-none"
                 dangerouslySetInnerHTML={{
                   __html: content,
                 }}
@@ -187,7 +189,7 @@ export default function Post({ post, socialImage, related }) {
        
 
       
-        <div className="md:max-w-3xl mx-auto">
+        <div className="">
         <Subscribe />
         {Array.isArray(relatedPostsList) && relatedPostsList.length > 0 && (            
           <div className="border-t border-gray-200 dark:border-gray-600 mt-10 py-10">
