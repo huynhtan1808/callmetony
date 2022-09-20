@@ -53,6 +53,7 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+          <script async defer src="https://cusdis.com/js/cusdis.es.js" />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />

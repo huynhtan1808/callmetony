@@ -13,6 +13,23 @@
     U+FEFF, U+FFFD;
 }
 
+
+#svgLogo:hover .bottomArrow {
+  transform: translate(0, 10%);
+  transition: 0.1s;
+  @apply fill-emerald-500;
+}
+#svgLogo:hover .rightArrow {
+  transform: translate(-5%, -20%);
+  transition: 0.1s;
+  @apply fill-emerald-500;
+}
+#svgLogo:hover .leftArrow {
+  transform: translate(-20%, -20%);
+  transition: 0.1s;
+  @apply fill-emerald-500;
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;

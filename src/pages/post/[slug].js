@@ -25,6 +25,7 @@ import Content from 'components/Content';
 import Metadata from 'components/Metadata';
 import FeaturedImage from 'components/FeaturedImage';
 import Subscribe from 'components/Subscribe/Subscribe';
+import Comment from 'components/Comment';
 import InArticleAds from 'components/Ads/inarticleAds';
 import GridAd from 'components/Ads/GridAd';
 import FixedAds from 'components/Ads/FixedAds';
@@ -230,6 +231,7 @@ export default function Post({ post, socialImage, related }) {
       </Container>
       </Section>
       </Content>
+      <Comment/>
     </Layout>
   );
 }
