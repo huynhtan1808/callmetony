@@ -109,7 +109,7 @@ const Footer = () => {
         </Section>
       )}
 
-      <Section className="flex flex-row items-end justify-between pt-16">
+      <Section className="flex flex-col md:flex-row md:items-end justify-between pt-16">
         <div className="font-4 text-sm text-gray-300 dark:text-gray-500">
           <p>
             &copy; {new Date().getFullYear()} {title}
@@ -125,8 +125,8 @@ const Footer = () => {
           {' '} của tôi.</p>
         </div>
         <div>
-        <ul className="flex text-sm text-gray-300 dark:text-gray-500">
-          <li className="mx-3">
+        <ul className="flex text-sm text-gray-300 dark:text-gray-500 pt-4 md:pt-0">
+          <li className="mr-3">
             <a className="hover:text-emerald-500" href="/feed.xml">RSS</a>
           </li>
           <li className="">

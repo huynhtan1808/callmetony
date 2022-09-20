@@ -226,7 +226,7 @@ const Nav = () => {
             </button>
           )}
           {searchVisibility === SEARCH_VISIBLE && (
-            <form className="md:flex absolute top-0 left-3 md:left-0 md:relative md:w-94 md:h-full justify-center	items-start p-2 md:p-3" ref={formRef} action="/search" data-search-is-active={!!query}>
+            <form className="md:flex absolute left-0 md:relative md:w-94 md:h-full justify-center	items-start py-2 md:p-3" ref={formRef} action="/search" data-search-is-active={!!query}>
               <input
               className="bg-gray-200 dark:bg-gray-600 w-64 p-2 md:px-4 text-md focus:outline-none rounded"
                 type="search"
