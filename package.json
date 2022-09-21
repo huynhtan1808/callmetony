@@ -40,6 +40,7 @@
     "react-dom": "17.0.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
+    "react-cusdis": "^2.0.1",
     "rehype": "^12.0.1",
     "rehype-parse": "^8.0.4",
     "rehype-prism-plus": "^1.5.0",

@@ -159,3 +159,7 @@ pre {
 .contentSection {
   @apply -mt-14;
 }
+#cusdis_thread .border-gray-200 {
+  border: 2px solid rgba(35, 35, 36, .78) !important;
+  background-color: #CBAB6C !important;
+}

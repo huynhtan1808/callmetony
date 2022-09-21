@@ -1,6 +1,7 @@
 import { RefObject, useEffect, useState } from 'react'
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
+import { ReactCusdis } from 'react-cusdis';
 
 import rehype from 'rehype'
 import rehypePrism from 'rehype-prism-plus'
@@ -25,7 +26,6 @@ import Content from 'components/Content';
 import Metadata from 'components/Metadata';
 import FeaturedImage from 'components/FeaturedImage';
 import Subscribe from 'components/Subscribe/Subscribe';
-import Comment from 'components/Comment';
 import InArticleAds from 'components/Ads/inarticleAds';
 import GridAd from 'components/Ads/GridAd';
 import FixedAds from 'components/Ads/FixedAds';
@@ -189,7 +189,7 @@ export default function Post({ post, socialImage, related }) {
        
 
       
-        <div className="">
+        <div>
         <Subscribe />
         {Array.isArray(relatedPostsList) && relatedPostsList.length > 0 && (            
           <div className="border-t border-gray-200 dark:border-gray-600 mt-10 py-10">
@@ -228,10 +228,21 @@ export default function Post({ post, socialImage, related }) {
             </div>
           )}
         </div>
+        <h3 className="my-5 text-xl">Bình luận</h3>
+          <div id="cmt">
+            <ReactCusdis
+              attrs={{
+                host: 'https://cusdis.com',
+                appId: "72ffb259-38ea-4244-8df5-7237c8514203",
+                pageId: post.slug,
+                pageTitle: post.title,
+                theme: 'dark',
+              }}
+            />
+          </div>
       </Container>
       </Section>
       </Content>
-      <Comment/>
     </Layout>
   );
 }
