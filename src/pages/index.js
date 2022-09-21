@@ -17,8 +17,8 @@ export default function Home({ posts, pagination }) {
   const { title, description } = metadata;
 
   const featuredArticlescount = Math.ceil(posts.length / 5)
-  const featuredArticle = posts.slice(1, featuredArticlescount)
-  const rowArticles = posts.slice(featuredArticlescount, 5)
+  const featuredArticle = posts.slice(0, 1)
+  const rowArticles = posts.slice(1, 4)
   const listArticles = posts.slice(5, posts.length)
 
 
