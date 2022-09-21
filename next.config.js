@@ -20,8 +20,13 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
   async redirects() {
       return [
         {
-          source: '/article/:slug*',
-          destination: '/post/:slug*', // Matched parameters can be used in the destination
+          source: '/index',
+          destination: '/', // Matched parameters can be used in the destination
+          permanent: true,
+        },
+        {
+          source: '/lien-he',
+          destination: '/contact', // Matched parameters can be used in the destination
           permanent: true,
         },
       ]
