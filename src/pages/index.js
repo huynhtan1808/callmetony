@@ -56,7 +56,7 @@ export default function Home({ posts, pagination }) {
                   Phát Triển Web, Wordpress và React / Next.js.
                 </p>
               </div>
-              <div className="w-[176px] relative mb-8 sm:mb-0 mr-auto avatar filter grayscale">
+              <div className="w-[176px] object-cover relative mb-8 sm:mb-0 mr-auto avatar filter grayscale">
                 <Image
                   alt="Tony Huynh"
                   src="/tony-huynh-avatar.png"

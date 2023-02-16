@@ -39,9 +39,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
-  overflow-x: auto;
-}
+
 
 #__next {
   @apply bg-gray-50 dark:bg-gray-900;
@@ -59,30 +57,16 @@ b, strong {
 }
 
 .prose pre {
-  @apply border border-gray-200 dark:border-gray-700;
-  overflow-x: auto;
+  @apply bg-gray-200 dark:bg-gray-700;
 }
 
 .prose code {
-  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-lg bg-transparent;
-}
-
-.prose pre code {
-  @apply text-gray-200 dark:text-gray-200 p-0;
-  border: initial;
-}
-
-code[class*='language-'],
-pre[class*='language-'] {
-  @apply text-gray-800 dark:text-gray-50;
-}
-
-pre::-webkit-scrollbar {
-  display: none;
+  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 rounded-md;
 }
 
 pre {
   white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .sub-menu ul>li:not(:last-child){
