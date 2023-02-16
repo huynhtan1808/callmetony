@@ -69,6 +69,7 @@ pre::-webkit-scrollbar {
   display: none;
 }
 
+
 .sub-menu ul>li:not(:last-child){
   @apply pb-4;
 }

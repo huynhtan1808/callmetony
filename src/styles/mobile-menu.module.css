@@ -21,7 +21,7 @@
   }
   
   .menu {
-    top: 104px;
+    top: 49px;
     margin: 0;
     width: 100%;
     height: 100vh;
@@ -50,8 +50,8 @@
     opacity: 1;
   }
 
-  .menu > * + * {
-    margin-top: 24px;
+  .menu > li {
+    padding-top: 16px;
   }
   
   @keyframes grow {
