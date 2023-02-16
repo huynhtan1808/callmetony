@@ -59,7 +59,7 @@ export default function Home({ posts, pagination }) {
               <div className="w-[176px] relative mb-8 sm:mb-0 mr-auto avatar filter grayscale">
                 <Image
                   alt="Tony Huynh"
-                  src="/avatar.png"
+                  src="/tony-huynh-avatar.png"
                 />
               </div>
             </div>
