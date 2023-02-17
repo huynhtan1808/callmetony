@@ -54,14 +54,13 @@ export default function TemplateArchive({
       </Header>
 
       <Section className="max-w-6xl mx-auto md:px-4">
-        <Container>
           {Array.isArray(posts) && (
             <>
             <div>
               <ul className="grid md:grid-cols-3 gap-6">
                 {posts.map((post) => {
                   return (
-                    <li key={post.slug} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pb-2 md:pt-0 rounded-lg transform hover:scale-[1.01] transition-all">
+                    <li key={post.slug} className="pb-2 md:pt-0 rounded-lg transform hover:scale-[1.01] transition-all">
                       <PostArchive post={post} options={postOptions} />
                     </li>
                   );
@@ -77,7 +76,6 @@ export default function TemplateArchive({
               )}
             </>
           )}
-        </Container>
       </Section>
     </Layout>
   );

@@ -197,7 +197,7 @@ const Nav = () => {
 
   return (
     <>
-    <div className="fixed backdrop-blur-2xl bg-white bg-opacity-20 dark:bg-gray-900 dark:bg-opacity-20 z-50 w-full flex flex-col justify-center px-6">
+    <div className="fixed backdrop-blur-xl bg-white bg-opacity-60 dark:bg-gray-900 dark:bg-opacity-80 z-50 w-full flex flex-col justify-center px-6">
     <nav className="flex items-center justify-between w-full relative max-w-6xl md:px-4 mx-auto py-1 text-gray-900 dark:text-gray-50">
           <div className="flex items-center space-x-8">
           <Link href="/">

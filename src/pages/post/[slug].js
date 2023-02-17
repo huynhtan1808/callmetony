@@ -205,7 +205,7 @@ export default function Post({ post, socialImage, related }) {
               )}
               <ul className="blogList pl-0 pt-5">
                 {relatedPostsList.map((post) => (
-                  <li className="list-none bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 cursor-pointer rounded" key={post.title}>
+                  <li className="list-none cursor-pointer rounded" key={post.title}>
                     <Link href={postPathBySlug(post.slug)}>
                     <div className="imgThumbnail">
                     {post.featuredImage && (
@@ -216,7 +216,7 @@ export default function Post({ post, socialImage, related }) {
                     )}
                     </div>
                     </Link>
-                    <div className="p-4 md:px-3 md:py-2 font-medium">
+                    <div className="py-2 font-medium">
                     <Link href={postPathBySlug(post.slug)}>
                       <a className="postTitle">{post.title}</a>
                     </Link>

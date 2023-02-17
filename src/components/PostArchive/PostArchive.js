@@ -34,7 +34,7 @@ const PostArchive = ({ post, options = {} }) => {
           />
         )}
           </div>
-          <div className="px-5 py-4">
+          <div className="py-4">
           <h2
             className="text-lg font-semibold mb-3"
             dangerouslySetInnerHTML={{

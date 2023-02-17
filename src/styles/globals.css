@@ -65,10 +65,13 @@ b, strong {
 .prose code {
   @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 rounded-md overflow-x-scroll;
 }
-pre::-webkit-scrollbar {
+.wp-block-code::-webkit-scrollbar {
   display: none;
 }
-
+.prose pre {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 .sub-menu ul>li:not(:last-child){
   @apply pb-4;
@@ -107,10 +110,10 @@ pre::-webkit-scrollbar {
   @apply w-full h-44 md:h-36 object-cover rounded;
 }
 .thumbnailImage img {
-  @apply w-full h-44 md:h-36 object-cover rounded-t-lg;
+  @apply w-full h-44 object-cover rounded-lg;
 }
 .imgThumbnail img {
-  @apply w-full h-44 lg:h-32 object-cover rounded-t;
+  @apply w-full h-44 lg:h-32 object-cover rounded;
 }
 .wp-block-image{
   @apply bg-white dark:bg-gray-800 rounded-lg;
