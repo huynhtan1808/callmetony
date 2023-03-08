@@ -60,7 +60,7 @@ export default function Page({ page, breadcrumbs }) {
             dangerouslySetInnerHTML={featuredImage.caption}
           />
         )}
-        <h1 className="text-4xl font-bold max-w-6xl mx-auto md:px-6">{title}</h1>
+        <h1 className="mt-10 text-4xl font-bold max-w-6xl mx-auto md:px-6">{title}</h1>
       </Header>
 
       <Content>
