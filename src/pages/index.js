@@ -42,7 +42,7 @@ export default function Home({ posts, pagination }) {
         </div>
       <Container>
       <Section className="max-w-6xl mx-auto">
-            <div className="flex flex-col-reverse sm:flex-row items-start pt-12 md:px-4">
+            <div className="flex flex-col-reverse sm:flex-row items-start pt-36 md:px-4">
               <div className="flex flex-col pr-8">
                 <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-2 text-gray-800 dark:text-gray-200">
                   Tony Huynh

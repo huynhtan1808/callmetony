@@ -53,7 +53,7 @@ export default function TemplateArchive({
          
       </Header>
 
-      <Section className="max-w-6xl mx-auto md:px-4">
+      <Section className="max-w-6xl mx-auto px-6">
           {Array.isArray(posts) && (
             <>
             <div>
